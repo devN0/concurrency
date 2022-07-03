@@ -7,8 +7,13 @@ public class Adder implements Runnable {
 
   @Override
   public void run() {
-    for (int i = 0; i <= 100; i++) {
-      val.value += i;
+    for (int i = 0; i <= 10000; i++) {
+      try {
+        Thread.sleep(1L);
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
+      val.add(i);
     }
   }
 }

@@ -14,11 +14,11 @@ public class Main {
 
     executor.shutdown();
     try {
-      executor.awaitTermination(5L, TimeUnit.SECONDS);
+      executor.awaitTermination(1, TimeUnit.MINUTES);
     } catch (Exception e) {
       e.printStackTrace();
     }
 
-    System.out.println(val.value);
+    System.out.println(val.get());
   }
 }
